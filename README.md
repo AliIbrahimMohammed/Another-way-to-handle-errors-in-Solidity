@@ -1,6 +1,19 @@
 # Another-way-to-handle-errors-in-Solidity
 
-Error handling in Solidity is the process of identifying and responding to potential errors that may occur during the execution of a smart contract. This can include things like checking for overflow or underflow when working with integers, ensuring that certain conditions are met before executing a function, or providing a way to revert the state of a contract in case of an error. Solidity provides several built-in keywords and functions, such as assert() and require(), that can be used for error handling in smart contracts.
+Error handling in Solidity is the process of identifying and responding to potential errors that may occur during the execution of a smart contract.
+This can include things like checking for overflow or underflow when working with integers, ensuring that certain conditions are met before executing a function, or providing a way to revert the state of a contract in case of an error. Solidity provides several built-in keywords and functions, such as assert() and require(), that can be used for error handling in smart contracts.
+
+throw keyword: This keyword is used in Solidity to raise an error and revert all changes made to the blockchain during the execution of a smart contract. When the throw keyword is encountered, the contract will stop executing and all changes made to the blockchain will be rolled back.
+
+assert() function: This function is used in Solidity to check if a given condition is true, and if not, it will raise an error and revert the contract to its previous state. The assert() function is intended for testing and debugging purposes and is not recommended for use in production contracts.
+
+revert() function: This function is used in Solidity to revert the state of a contract to its previous state, and any changes made to the blockchain will be rolled back. This function can be used to handle errors, and it will also return a message describing the reason for the error.
+
+External contract: External contract is a smart contract that exist outside of the current contract and can be called by the current contract. It can be used to handle errors and take actions accordingly.
+
+fallback function: A fallback function in Solidity is a special function that is called when no other function matches the input data. It can be used to handle unexpected input and errors.
+
+events: Events are a way to log the execution of a smart contract in the blockchain. They can be used to record important actions, such as the transfer of funds, and can also be used for debugging and monitoring the contract's behavior.
 
 
 There are several ways to handle errors in Solidity, some of which include:
